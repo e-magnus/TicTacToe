@@ -10,7 +10,7 @@ addons:
     - heroku-toolbelt script:
   - ./gradlew clean
   - ./gradlew check
-  - git remote add heroku git@heroku.com:hnetusmjor.git
+  - git remote add heroku git@heroku.com:TicTacToe.git
   # Add your Heroku API key:
   - export HEROKU_API_KEY=78a31987-148d-45b8-b804-55feef602960
   # Turn off warnings about SSH keys:
