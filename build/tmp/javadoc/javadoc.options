@@ -1,6 +1,0 @@
--classpath '/mnt/c/Users/GarðarMár/Desktop/TicTacToe/build/classes/main:/mnt/c/Users/GarðarMár/Desktop/TicTacToe/build/resources/main:/root/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar'
--d '/mnt/c/Users/GarðarMár/Desktop/TicTacToe/build/docs/javadoc'
--doctitle 'TicTacToe API'
--quiet 
--windowtitle 'TicTacToe API'
-'/mnt/c/Users/GarðarMár/Desktop/TicTacToe/src/main/java/is/ru/TicTacToe/TicTacToe.java'
