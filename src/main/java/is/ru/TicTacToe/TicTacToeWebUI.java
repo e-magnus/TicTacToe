@@ -1,19 +1,9 @@
 package is.ru.tictactoe;
 
-import spark.*;
 import static spark.Spark.*;
-import spark.servlet.SparkApplication;
-
-public class TicTacToeWebUI implements SparkApplication {
-	private final ResourceToInject resourceToInject;
-
-    public HelloWorldApp(ResourceToInject resourceToInject) {
-        this.resourceToInject = resourceToInject;
+ 
+public class HelloSpark {
+    public static void main(String[] args) {
+        get("/", (req, res) -> "Hello, World!");
     }
-
-    @Override
-    public void init() {
-        get("/", (req, res) -> resouceToInject::sayHello);
-    }
-
 }
