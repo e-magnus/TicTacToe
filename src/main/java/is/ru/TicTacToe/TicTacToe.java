@@ -1,12 +1,20 @@
-package is.ru.TicTacToe;
+package is.ru.tictactoe;
 
-import spark.*;
-import static spark.Spark.*;
-import spark.servlet.SparkApplication;
 
-public class TicTacToe implements SparkApplication {
-	public static void main(String[] args) {
-        	get("/hello", (req, res) -> "Hello World");
-    	}
+public class TicTacToe {
+    public static void main(String[] args) {
+		bool web = false;
+		if (args.length > 0) {
+            if (args[0].equals("web")) {
+                web = true;
+            }
+        }
+		
+		if(web){
+			TicTacToeWebUI  webui = new TicTacToeWebUI();
+		}
+		else{
+			System.out.println("Þetta er console");
+		}
+	}
 }
-
