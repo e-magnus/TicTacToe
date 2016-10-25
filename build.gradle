@@ -36,6 +36,6 @@ repositories {
     jcenter { url "http://jcenter.bintray.com/" }
 }
 
-task stage{
+task stage {
    dependsOn installDist
 }
