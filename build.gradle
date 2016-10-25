@@ -9,6 +9,7 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'jacoco'
 apply plugin: 'application'
 
 mainClassName ="is.ru.TicTacToe.TicTacToe"
@@ -30,12 +31,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
     
 }
+task stage {
+   dependsOn clean,installDist
+}
 
 repositories {
     maven { url 'http://repo1.maven.org/maven2' }
     jcenter { url "http://jcenter.bintray.com/" }
 }
 
-task stage {
-   dependsOn installDist
-}
