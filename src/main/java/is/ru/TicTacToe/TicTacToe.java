@@ -1,8 +1,12 @@
 package is.ru.TicTacToe;
 
-public class TicTacToe {
+import spark.*;
+import static spark.Spark.*;
+import spark.servlet.SparkApplication;
+
+public class TicTacToe implements SparkApplication {
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
+        	get("/hello", (req, res) -> "Hello World");
+    	}
 }
 
