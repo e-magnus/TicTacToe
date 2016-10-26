@@ -71,7 +71,7 @@ public class Board {
 		}
 		/*Diagonal*/
 		return(p == board[0] && p == board[4] && p == board[8]) ||
-		return(p == board[2] && p == board[4] && p == board[6]);
+		      (p == board[2] && p == board[4] && p == board[6]);
 	}
 	
 	public void clearBoard()
