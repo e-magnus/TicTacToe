@@ -9,6 +9,7 @@ public class BoardTest {
 	{
 		Board b = new Board();
 		b.isValidMove(0);
+		b.isValidMove(3);
 		b.isValidMove(8);
 	}
 }
