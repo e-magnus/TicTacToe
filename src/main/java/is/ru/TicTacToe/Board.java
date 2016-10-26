@@ -81,4 +81,16 @@ public class Board {
 			board[i] = null;
 		}
 	}
+	
+	public Boolean isDraw()
+	{
+		for(int i = 0; i < 9; i++)
+		{
+			if(board[i] == null)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 }
