@@ -1,8 +1,10 @@
 package is.ru.tictactoe;
 
+import spark.*;
 import static spark.Spark.*;
+import spark.servlet.SparkApplication;
  
-public class TicTacToeWebUI {
+public class TicTacToeWebUI implements SparkApplication {
 	private static Board board;
 	
     public static void setup() {
