@@ -50,4 +50,10 @@ public class Board {
 		isValidMove(input);
 		board[input] = player;
 	}
+	
+	public Boolean isEmpty(int input)
+	{
+		isValidMove(input);
+		return board[input] == null;
+	}
 }
