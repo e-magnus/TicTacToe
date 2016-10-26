@@ -22,9 +22,6 @@ public class TicTacToeWebUI implements SparkApplication {
 	
 	@Override
     public void init() {
-        post("/Initialize", (req, res) -> {
-            board.initializeBoard();
-            return "";
-        });
+        get("/currentPlayer", (req, res) -> 'X');
     }
 }
