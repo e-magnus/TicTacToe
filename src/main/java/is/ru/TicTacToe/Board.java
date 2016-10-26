@@ -44,4 +44,10 @@ public class Board {
         }
         return str.toString();
     }
+	
+	public void insertSymbol(Player player, int input)
+	{
+		isValidMove(input);
+		board[input] = player;
+	}
 }
