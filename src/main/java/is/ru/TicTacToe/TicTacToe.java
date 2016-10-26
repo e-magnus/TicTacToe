@@ -12,7 +12,6 @@ public class TicTacToe {
 		
 		if(web){
 			TicTacToeWebUI  webui = new TicTacToeWebUI();
-			webui.setup();
 		}
 		else{
 			System.out.println("Þetta er console");
