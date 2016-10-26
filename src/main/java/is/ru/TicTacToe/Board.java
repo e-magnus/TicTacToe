@@ -15,4 +15,33 @@ public class Board {
 			throw new IndexOutOfBoundsException("Input " + input + " is not between 0 and 8!");
 		}
 	}
+	
+		public String printBoard() 
+		{
+        StringBuilder str = new StringBuilder();
+        for(int i = 0; i < 9; i++) 
+		{
+            String symbol;
+			
+			if(board[i] == null)
+			{
+				symbol = " ";
+			}
+			else
+			{
+				symbol = board[i].getSymbol();
+			}
+            str.append(" " + symbol + " ");
+
+            if((i + 1) % 3 == 0) 
+			{
+                str.append(i != 8 ? "\n---+---+---\n" : "\n");
+            }
+			else 
+			{
+                str.append("|");
+            }
+        }
+        return str.toString();
+    }
 }
