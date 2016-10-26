@@ -6,8 +6,8 @@ public class Player {
 	
 	Player(String nick, String symb)
 	{
-		nickname = nick;
-		symbol = symb;
+		setNickname(nick);
+		setSymbol(symb);
 	}
 	
 	public String getNickname()
@@ -18,5 +18,15 @@ public class Player {
 	public String getSymbol()
 	{
 		return symbol;
+	}
+	
+	public void setNickname(String nick)
+	{
+		nickname = nick;
+	}
+	
+	public void setSymbol(String symb)
+	{
+		symbol = symb.substring(0, 1);
 	}
 }
