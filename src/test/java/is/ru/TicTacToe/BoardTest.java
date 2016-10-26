@@ -40,7 +40,7 @@ public class BoardTest {
 		b.insertSymbol(p2, 2);
 		b.insertSymbol(p1, 5);
 		b.insertSymbol(p1, 4);
-        assertEquals(" X |   | O \n---+---+---\n   | X | X \n---+---+---\n   |   |   \n", b.printBoard());
+        assertEquals("   | X | O \n---+---+---\n   | X | X \n---+---+---\n   |   |   \n", b.printBoard());
     }
 	
 	
