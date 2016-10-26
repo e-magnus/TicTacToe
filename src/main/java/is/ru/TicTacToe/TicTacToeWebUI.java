@@ -9,7 +9,7 @@ public class TicTacToeWebUI {
 		board = new Board();
 		
 		staticFileLocation("/public");
-        SparkApplication tttweb = new TicTacToeWebUI();
+        SparkApplication ticweb = new TicTacToeWebUI();
 		
 		String port = System.getenv("PORT");
         if (port != null) {
