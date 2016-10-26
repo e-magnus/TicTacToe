@@ -7,7 +7,7 @@ import spark.servlet.SparkApplication;
 public class TicTacToeWebUI implements SparkApplication {
 	//private static Board board;
 	
-    public static void setup() {
+    public static void main(String[] args) {
 		//board = new Board();
 		
 		staticFileLocation("/public");
