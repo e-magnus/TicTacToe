@@ -56,4 +56,29 @@ public class Board {
 		isValidMove(input);
 		return board[input] == null;
 	}
+	
+	public Boolean isWinner(Player p)
+	{
+		/*Horizontal*/
+		for(int i = 0; i < 9; i += 3)
+		{
+			return(p == board[i] && p == board[i + 1] && p == board[i + 2]);
+		}
+		/*Vertical*/
+		for(int i = 0; i < 9; i++)
+		{
+			return(p == board[i] && p == board[i + 3] && p == board[i + 6]);
+		}
+		/*Diagonal*/
+		return(p == board[0] && p == board[4] && p == board[8]) ||
+		return(p == board[2] && p == board[4] && p == board[6]);
+	}
+	
+	public void clearBoard()
+	{
+		for(int i = 0; i < 9; i++)
+		{
+			board[i] = null;
+		}
+	}
 }
