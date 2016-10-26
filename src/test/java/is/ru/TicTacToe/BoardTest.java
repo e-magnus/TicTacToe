@@ -7,7 +7,7 @@ public class BoardTest {
 	@Test
 	public void testForValidInput()
 	{
-		Board b = new board();
+		Board b = new Board();
 		b.isValidMove(0);
 		b.isValidMove(8);
 	}
