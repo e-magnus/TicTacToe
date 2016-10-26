@@ -16,18 +16,18 @@ public class BoardTest {
 	@Test (expected = IndexOutOfBoundsException.class)
     public void testInputTooLow() {
         Board b = new Board();
-        b.validateIndex(-1);
+        b.isValidMove(-1);
     }
 
     @Test (expected = IndexOutOfBoundsException.class)
     public void testInputTooHigh() {
         Board b = new Board();
-        b.validateIndex(9);
+        b.isValidMove(9);
     }
 	
 	@Test
     public void testToString() {
-        Board board = new Board();
-        assertEquals("   |   |   \n---+---+---\n   |   |   \n---+---+---\n   |   |   \n", board.printBoard());
+        Board b = new Board();
+        assertEquals("   |   |   \n---+---+---\n   |   |   \n---+---+---\n   |   |   \n", b.printBoard());
     }
 }
