@@ -8,12 +8,6 @@ public class Board {
 		board = new Player[9];
 	}
 	
-	/*public void initializeBoard() {
-        for (int i = 0; i < 9; i++) {
-            board[i] = 'X';
-        }
-    }*/
-	
 	public void isValidMove(int input)
 	{
 		if(input < 0 || input >= 9)
