@@ -24,7 +24,7 @@ public class TicTacToeWebUI implements SparkApplication {
     public void init() {
         post("/Initialize", (req, res) -> {
             //board.initializeBoard();
-            return "";
+            return ""; 
         });
     }
 }
