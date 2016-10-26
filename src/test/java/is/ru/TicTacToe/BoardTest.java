@@ -95,5 +95,17 @@ public class BoardTest {
 		assertEquals(true, b.isWinner(p));
 	}
 	
-	
+	@Test
+	public void testIsDraw()
+	{
+		Board b = new Board();
+		Player p = new Player("Nick Young", "X");
+		for(int i = 0; i < 8; i++)
+		{
+			b.insertSymbol(p, i);
+		}
+		assertEquals(false, b.isDraw());
+		b.insertSymbol(p, 8);
+		assertEquals(true, b.isDraw());
+	}
 }
