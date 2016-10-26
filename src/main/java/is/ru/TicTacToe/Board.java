@@ -1,9 +1,10 @@
-package is.ru.tictactoe;
+package is.ru.TicTacToe;
 
 public class Board {
     private Player[] board;
 	
-	Board() {
+	Board() 
+	{
 		board = new Player[9];
 	}
 	
@@ -17,7 +18,7 @@ public class Board {
 	{
 		if(input < 0 || input >= 9)
 		{
-			throw new OutOfBoundsException("Input " + input + " is not between 0 and 8!");
+			throw new IndexOutOfBoundsException("Input " + input + " is not between 0 and 8!");
 		}
 	}
 }
