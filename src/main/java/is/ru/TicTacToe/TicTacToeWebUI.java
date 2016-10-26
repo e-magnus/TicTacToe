@@ -1,15 +1,17 @@
 package is.ru.tictactoe;
 
+import spark.*;
 import static spark.Spark.*;
+import spark.servlet.SparkApplication;
  
-public class TicTacToeWebUI {
+public class TicTacToeWebUI implements SparkApplication {
 	private static Board board;
 	
     public static void setup() {
 		board = new Board();
 		
 		staticFileLocation("/public");
-        SparkApplication tttweb = new TicTacToeWebUI();
+        SparkApplication ticweb = new TicTacToeWebUI();
 		
 		String port = System.getenv("PORT");
         if (port != null) {
