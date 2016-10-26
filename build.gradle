@@ -11,7 +11,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName ="is.TicTacToe.TicTacToe"
+mainClassName ="is.TicTacToe.TicTacToeWebUI"
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
@@ -27,11 +27,11 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.5'
     
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.11'
     
 }
 task stage {
-   dependsOn clean,installDist
+   dependsOn installDist
 }
 
 repositories {
