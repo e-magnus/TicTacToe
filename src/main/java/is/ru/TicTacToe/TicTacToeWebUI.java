@@ -1,4 +1,4 @@
-package is.ru.tictactoe;
+package is.TicTacToe;
 
 import spark.*;
 import static spark.Spark.*;
@@ -22,6 +22,16 @@ public class TicTacToeWebUI implements SparkApplication {
 	
 	@Override
     public void init() {
-        post("/random", (req, res) -> "Hello World!");
+        final Chuck chuck = new Chuck();    
+        post("/random", (req, res) -> chuck.random());
+        post("/id", (req, res) -> chuck.getById(req.queryParams("id")));
+        post("/setName", (req, res) -> {
+            chuck.alterName(
+                req.queryParams("firstName"),
+                req.queryParams("lastName")
+            );          
+            res.status(200);
+            return res;
+        });
     }
 }
