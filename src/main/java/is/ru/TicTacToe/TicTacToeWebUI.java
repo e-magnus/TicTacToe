@@ -1,4 +1,4 @@
-package is.ru.tictactoe;
+package is.ru.TicTacToe;
 
 import spark.*;
 import static spark.Spark.*;
@@ -22,10 +22,6 @@ public class TicTacToeWebUI implements SparkApplication {
 	
 	@Override
     public void init() {
-        post("/Initialize", (req, res) -> {
-            //board.initializeBoard();
-            return ""; 
-        });
-        get("/currentPlayer", (req, res) -> 'X');
+        
     }
 }
