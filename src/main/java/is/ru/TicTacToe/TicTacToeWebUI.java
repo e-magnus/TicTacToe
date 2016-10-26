@@ -26,5 +26,6 @@ public class TicTacToeWebUI implements SparkApplication {
             //board.initializeBoard();
             return ""; 
         });
+        get("/currentPlayer", (req, res) -> 'X');
     }
 }
