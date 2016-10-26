@@ -1,4 +1,4 @@
-package is.ru.TicTacToe;
+package is.TicTacToe;
 
 
 public class TicTacToe {
