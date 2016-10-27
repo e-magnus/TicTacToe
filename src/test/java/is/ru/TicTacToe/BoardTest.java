@@ -1,4 +1,4 @@
-package is.ru.TicTacToe;
+package is.TicTacToe;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -63,5 +63,49 @@ public class BoardTest {
 		assertEquals(false, b.isEmpty(1));
 	}
 	
+	public void testForWinner ()
+	{
+		Board b = new Board();
+		Player p = new Player("Nick Young", "X");
+		assertEquals(false, b.isWinner(p));
+		
+		/*test horizontal*/
+		b.insertSymbol(p, 1);
+		b.insertSymbol(p, 2);
+		assertEquals(false, b.isWinner(p));
+		b.insertSymbol(p, 0);
+		assertEquals(true, b.isWinner(p));
+		
+		b.clearBoard();
+		
+		/*test vertical*/
+		b.insertSymbol(p, 1);
+		b.insertSymbol(p, 4);
+		assertEquals(false, b.isWinner(p));
+		b.insertSymbol(p, 7);
+		assertEquals(true, b.isWinner(p));
+		
+		b.clearBoard();
+		
+		/*test diagonal*/
+		b.insertSymbol(p, 0);
+		b.insertSymbol(p, 4);
+		assertEquals(false, b.isWinner(p));
+		b.insertSymbol(p, 8);
+		assertEquals(true, b.isWinner(p));
+	}
 	
+	@Test
+	public void testIsDraw()
+	{
+		Board b = new Board();
+		Player p = new Player("Nick Young", "X");
+		for(int i = 0; i < 8; i++)
+		{
+			b.insertSymbol(p, i);
+		}
+		assertEquals(false, b.isDraw());
+		b.insertSymbol(p, 8);
+		assertEquals(true, b.isDraw());
+	}
 }
