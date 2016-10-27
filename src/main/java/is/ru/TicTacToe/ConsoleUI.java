@@ -2,6 +2,7 @@ package is.TicTacToe;
 
 import java.util.Scanner;
 
+
 public class ConsoleUI{
     private Board board;
     private Scanner sc;
