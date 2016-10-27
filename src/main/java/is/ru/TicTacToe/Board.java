@@ -59,9 +59,9 @@ public class Board {
 	
 	public Boolean isWinner(Player p)
 	{
-	 return(winningHorizontlly(p) ||
+	 return winningHorizontlly(p) ||
 		    winningVerticlly(p)   ||
-			winningDiagonally(p));
+			winningDiagonally(p);
 	}
 	
 	public Boolean winningHorizontlly(Player p)
