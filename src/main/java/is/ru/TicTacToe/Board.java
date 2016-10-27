@@ -3,7 +3,7 @@ package is.TicTacToe;
 public class Board {
     private Player[] board;
 	
-	// Constructor.
+	// Defualt constructor.
 	Board() 
 	{
 		board = new Player[9];
