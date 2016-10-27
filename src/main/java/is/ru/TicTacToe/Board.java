@@ -59,17 +59,29 @@ public class Board {
 	
 	public Boolean isWinner(Player p)
 	{
-		/*Horizontal*/
+	 return(winningHorizontlly(p) ||
+		    winningVerticlly(p)   ||
+			winningDiagonally(p);
+	}
+	
+	public Boolean winningHorizontlly(Player p)
+	{
 		for(int i = 0; i < 9; i += 3)
 		{
 			return(p == board[i] && p == board[i + 1] && p == board[i + 2]);
 		}
-		/*Vertical*/
+	}
+	
+	public Boolean winningVerticlly(Player p)
+	{
 		for(int i = 0; i < 9; i++)
 		{
 			return(p == board[i] && p == board[i + 3] && p == board[i + 6]);
 		}
-		/*Diagonal*/
+	}
+	
+	public Boolean winningDiagonally(Player p)
+	{
 		return(p == board[0] && p == board[4] && p == board[8]) ||
 		      (p == board[2] && p == board[4] && p == board[6]);
 	}
