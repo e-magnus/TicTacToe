@@ -10,6 +10,9 @@ public class BoardTest {
 		Board b = new Board();
 		b.isValidMove(0);
 		b.isValidMove(3);
+		b.isValidMove(5);
+		b.isValidMove(6);
+		b.isValidMove(7);
 		b.isValidMove(8);
 	}
 	
@@ -18,6 +21,8 @@ public class BoardTest {
 	{
         Board b = new Board();
         b.isValidMove(-1);
+		b.isValidMove(-10);
+		b.isValidMove(-100);
     }
 
     @Test (expected = IndexOutOfBoundsException.class)
@@ -25,6 +30,7 @@ public class BoardTest {
 	{
         Board b = new Board();
         b.isValidMove(9);
+		b.isValidMove(10);
     }
 	
 	@Test
