@@ -3,13 +3,16 @@ package is.TicTacToe;
 public class Board {
     private Player[] board;
 	
+	// Defualt constructor.
 	Board() 
 	{
 		board = new Player[9];
 	}
 	
+	// Check if move is valid for 3x3 board.
 	public void isValidMove(int input)
 	{
+		// Throws exeption if 1-9 is not selected.
 		if(input < 0 || input >= 9)
 		{
 			throw new IndexOutOfBoundsException("Input " + input + " is not between 0 and 8!");
@@ -45,18 +48,21 @@ public class Board {
         return str.toString();
     }
 	
+	// Insert right simble for player.
 	public void insertSymbol(Player player, int input)
 	{
 		isValidMove(input);
 		board[input] = player;
 	}
 	
+	// Check if selected square is empty.
 	public Boolean isEmpty(int input)
 	{
 		isValidMove(input);
 		return board[input] == null;
 	}
 	
+	// Check if player has won the game.
 	public Boolean isWinner(Player p)
 	{
 		/*Horizontal*/
@@ -74,6 +80,7 @@ public class Board {
 		      (p == board[2] && p == board[4] && p == board[6]);
 	}
 	
+	// Sett all squesrs to "NULL".
 	public void clearBoard()
 	{
 		for(int i = 0; i < 9; i++)
@@ -82,6 +89,7 @@ public class Board {
 		}
 	}
 	
+	// Check if game ends with draw.
 	public Boolean isDraw()
 	{
 		for(int i = 0; i < 9; i++)
