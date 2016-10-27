@@ -22,7 +22,7 @@ public class Board {
 	// Prints game board to consol.
 	public String printBoard() 
 		{
-        StringBuilder str = new StringBuilder();
+        StringBuilder theBoard = new StringBuilder();
         for(int i = 0; i < 9; i++) 
 		{
             String symbol;
@@ -35,18 +35,18 @@ public class Board {
 			{
 				symbol = board[i].getSymbol();
 			}
-            str.append(" " + symbol + " ");
+            theBoard.append(" " + symbol + " ");
 
             if((i + 1) % 3 == 0) 
 			{
-                str.append(i != 8 ? "\n---+---+---\n" : "\n");
+                theBoard.append(i != 8 ? "\n---+---+---\n" : "\n");
             }
 			else 
 			{
-                str.append("|");
+                theBoard.append("|");
             }
         }
-        return str.toString();
+        return theBoard.toString();
     }
 	
 	// Insert right simble for player.
