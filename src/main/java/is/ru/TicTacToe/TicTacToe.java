@@ -1,9 +1,9 @@
-package is.ru.tictactoe;
+package is.TicTacToe;
 
 
 public class TicTacToe {
     public static void main(String[] args) {
-		Boolean web = true;
+		Boolean web = false;
 		if (args.length > 0) {
             if (args[0].equals("web")) {
                 web = true;

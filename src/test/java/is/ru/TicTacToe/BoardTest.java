@@ -1,4 +1,4 @@
-package is.ru.TicTacToe;
+package is.TicTacToe;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
