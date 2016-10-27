@@ -19,7 +19,8 @@ public class Board {
 		}
 	}
 	
-		public String printBoard() 
+	// Prints game board to consol.
+	public String printBoard() 
 		{
         StringBuilder str = new StringBuilder();
         for(int i = 0; i < 9; i++) 
