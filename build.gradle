@@ -20,16 +20,30 @@ repositories {
     mavenCentral()
 }
 
+// Necessary for Selenium
+sourceSets {
+    selenium
+}
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
+
+    // Application dependencies
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.5'
     compile 'com.sparkjava:spark-core:2.5'
-    
+
+    // Unit test dependencies
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+
+    // Selenium dependencies
+    seleniumCompile 'junit:junit:4.11'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.0.1'
     
 }
+
 task stage {
    dependsOn clean,installDist
 }
@@ -39,3 +53,8 @@ repositories {
     jcenter { url "http://jcenter.bintray.com/" }
 }
 
+// Necessary for Selenium
+task selenium(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+}
