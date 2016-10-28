@@ -18,7 +18,7 @@ public class Board {
 	
 		public String printBoard() 
 		{
-        StringBuilder str = new StringBuilder();
+        StringBuilder theBoard = new StringBuilder();
         for(int i = 0; i < 9; i++) 
 		{
             String symbol;
@@ -31,18 +31,18 @@ public class Board {
 			{
 				symbol = board[i].getSymbol();
 			}
-            str.append(" " + symbol + " ");
+            theBoard.append(" " + symbol + " ");
 
             if((i + 1) % 3 == 0) 
 			{
-                str.append(i != 8 ? "\n---+---+---\n" : "\n");
+                theBoard.append(i != 8 ? "\n---+---+---\n" : "\n");
             }
 			else 
 			{
-                str.append("|");
+                theBoard.append("|");
             }
         }
-        return str.toString();
+        return theBoard.toString();
     }
 	
 	public void insertSymbol(Player player, int input)
@@ -59,17 +59,31 @@ public class Board {
 	
 	public Boolean isWinner(Player p)
 	{
-		/*Horizontal*/
+		return winningHorizontlly(p) ||
+			   winningVerticlly(p)   ||
+			   winningDiagonally(p);
+	}
+	
+	public Boolean winningHorizontlly(Player p)
+	{
 		for(int i = 0; i < 9; i += 3)
 		{
 			return(p == board[i] && p == board[i + 1] && p == board[i + 2]);
 		}
-		/*Vertical*/
+		return false;
+	}
+	
+	public Boolean winningVerticlly(Player p)
+	{
 		for(int i = 0; i < 9; i++)
 		{
 			return(p == board[i] && p == board[i + 3] && p == board[i + 6]);
 		}
-		/*Diagonal*/
+		return false;
+	}
+	
+	public Boolean winningDiagonally(Player p)
+	{
 		return(p == board[0] && p == board[4] && p == board[8]) ||
 		      (p == board[2] && p == board[4] && p == board[6]);
 	}
